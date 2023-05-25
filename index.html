@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik</title>
+    <link rel="icon" type="image/x-icon" href="icon2-bg.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="titlepage">
+        <p class="head">Katik <span>Kalkulator Matematik</span></p>
+    </div>
+    
+  </header>
+
+  <h2>Welcome to Katik</h2>
+  <p class="opening">
+      Hai Sobat, Selamat datang di Katik :) <br>
+      Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.
+  </p>
+
+  <div class="container">
+    <div class="panel">
+      <div class="panel-header">
+        <h3>Luas Persegi</h3>
+      </div>
+
+      <div class="panel-body">
+        <div class="image-container">
+            <img src="persegi.png" alt="bangun-datar-persegi">
+        </div>
+        <p>Rumus Luas Persegi yaitu:</p>
+        <p>L = S x S</p>
+        <p>
+            Di mana: <br>
+            L = Luas <br>
+            S = Sisi
+        </p>
+      </div>
+
+      <div class="panel-footer">
+        <h3>Hitung Luas Persegi</h3>
+        <form action="hitungluas-persegi" id="luas-persegi" method="post">
+            <div class="input-group">
+                <input type="text" class="input-field" id="sisi" placeholder="nilai sisi" name="sisi-luas" required onkeypress="return validateNumber(event)">
+            </div>
+
+            <div class="button-group">
+              <button type="button" name="hitung-luas" class="submit-button" onclick="LuasPersegi()">Hitung</button>
+              <div id="output_luas" name="outputluas"></div>
+              <button type="reset" class="reset-button" onclick="hideOutput('output_luas')">Reset</button>
+              <div class="clearfix"></div>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <h3>Keliling Persegi</h3>
+      </div>
+
+      <div class="panel-body">
+        <div class="image-container">
+            <img src="persegi.png" alt="bangun-datar-persegi">
+        </div>
+        <p>Rumus Keliling Persegi</p>
+        <p>K = 4 x S</p>
+        <p>
+             Di mana: <br>
+             K = Keliling <br>
+             S = Sisi
+        </p>
+      </div>
+
+      <div class="panel-footer">
+        <h3>Hitung Keliling Persegi</h3>
+        <form action="hitungkel-persegi" method="post">
+            <div class="input-group">
+                <input type="text" class="input-field" id="sisi_keliling" placeholder="nilai sisi" name="sisi-keliling" required onkeypress="return validateNumber(event)">
+            </div>
+
+            <div class="button-group">
+              <button type="button" name="hitung-keliling" class="submit-button" onclick="KelilingPersegi()">Hitung</button>
+              <div id="output_keliling" name="outputkel"></div>
+              <button type="reset" class="reset-button" onclick="hideOutput('output_keliling')">Reset</button>
+              <div class="clearfix"></div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>

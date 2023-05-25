@@ -1,0 +1,40 @@
+/* Default styles */
+
+/* Add your existing CSS styles here */
+
+/* Responsive styles */
+
+/* Adjust the container layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .panel {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Adjust the panel layout for smaller screens */
+  @media screen and (max-width: 480px) {
+    .panel {
+      border-radius: 0;
+    }
+    
+    .panel-body {
+      padding: 10px 5px;
+    }
+    
+    .panel-footer {
+      padding: 10px 5px;
+    }
+  }
+  
+  /* Adjust the input field width for smaller screens */
+  @media screen and (max-width: 320px) {
+    .input-field {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  
